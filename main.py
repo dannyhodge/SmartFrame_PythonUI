@@ -12,7 +12,7 @@ HEIGHT = 600
 windowSurface = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
 
 def getImages():
-    r = requests.get('192.168.0.12:3002/images')
+    r = requests.get('http://192.168.0.12:3002/images')
     print("Status: " + str(r.status_code))
     return r.json()
 
